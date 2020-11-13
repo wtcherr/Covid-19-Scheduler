@@ -1,0 +1,60 @@
+.slider{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    margin: auto;
+    overflow: auto;
+    white-space: nowrap;
+    display: flex;
+    margin-bottom: 5px;
+}
+.hours{
+    overflow: auto;
+    white-space: nowrap;
+    display: flex;
+    background-color: violet;
+}
+.slider .hour{
+    background-color: violet;
+    height: 100%;
+    width: 50px;
+    padding: 0 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+}
+.daytime{
+    height: 100%;
+    width: 50px;
+    padding: 0 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    outline: none;
+    color: white;
+    background-color: var(--dark-purple);
+}
+.timeline{
+    width: 100%;
+    height: 100px;
+    margin: 25px auto;
+    background-color: violet;
+    text-align: center;
+    font-size: xx-large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.days{
+    font-size: x-small;
+    font-weight: bold;
+}
+.tab{
+    display: block;
+    width: 80%;
+    margin: auto;
+}

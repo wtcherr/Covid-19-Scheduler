@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./app.js"></script>
+    <script src="./main.js"></script>
+    <link rel="stylesheet" href="./main.css">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body onload="viewer()">
+    <div class="side-nav">
+        <div class="nav-btn" onclick="openNav(document.querySelector('.side-nav'),closeBtn(this))">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="nav-links fade">
+            <div class="nav-search-bar">
+                <input type="text" placeholder="Search..">
+            </div>
+            <a href="index.html">Home</a>
+            <a href="map.html">Make Reservation</a>
+            <a href="regplace.html">Register Place</a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-preview">
+            <div class="view fade">
+                <div class="img" id="img1">
+                    <div class="img-desc1">
+                        <h2>YOUR HEALTH IS OUR RESPONSIBILITY</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="view fade">
+                <div class="img" id="img2">
+                    <div class="img-desc2">
+                        <h2>GO WHEREVER YOU WANT</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="view fade">
+                <div class="img" id="img3">
+                    <div class="img-desc3">
+                        <h2>WE WORKING 24/7</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

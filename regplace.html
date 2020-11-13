@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./main.js"></script>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./test.css">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="side-nav">
+        <div class="nav-btn" onclick="openNav(document.querySelector('.side-nav'),closeBtn(this))">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="nav-links fade">
+            <div class="nav-search-bar">
+                <input type="text" placeholder="Search..">
+            </div>
+            <a href="index.html">Home</a>
+            <a href="map.html">Make Reservation</a>
+            <a href="regplace.html">Register Place</a>
+        </div>
+    </div>
+    <div class="main">
+        <h2 style="text-align: center;">Register Your Place Today!!</h2>
+        <div class="regplace-form">
+            <form action="" id="regform">
+                <div class="tab">
+                    <div class="field">
+                        <label for="pname">Place Name</label>
+                        <input type="text" name="pname" placeholder="ex: Macdonalds">
+                    </div>
+                    <div class="field">
+                        <label for="paddress">Place Address</label>
+                        <input type="text" name="paddress" placeholder="ex: 132, My Street,: Kingston, New York">
+                    </div>
+                    <div class="field">
+                        <label for="owner">Owner Name</label>
+                        <input type="text" name="owner" placeholder="ex: John Mills">
+                    </div>
+                    <div class="field">
+                        <label for="phonenumber">Phone Number</label>
+                        <input type="text" name="phonenumber" placeholder="ex: +12345678910">
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="timeline">TIMELINE
+                        <div class="days">
+                            <input type="checkbox">SUNDAY
+                            <input type="checkbox">MONDAY
+                            <input type="checkbox">TUESDAY
+                            <input type="checkbox">WEDNESDAY
+                            <input type="checkbox">THURSDAY
+                            <input type="checkbox">FRIDAY
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div class="daytime">AM</div>
+                        <div class="hours">
+                            <div class="hour">1:00</div>
+                            <div class="hour">2:00</div>
+                            <div class="hour">3:00</div>
+                            <div class="hour">4:00</div>
+                            <div class="hour">5:00</div>
+                            <div class="hour">6:00</div>
+                            <div class="hour">7:00</div>
+                            <div class="hour">8:00</div>
+                            <div class="hour">9:00</div>
+                            <div class="hour">10:00</div>
+                            <div class="hour">11:00</div>
+                            <div class="hour">12:00</div>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div class="daytime">PM</div>
+                        <div class="hours">
+                            <div class="hour">1:00</div>
+                            <div class="hour">2:00</div>
+                            <div class="hour">3:00</div>
+                            <div class="hour">4:00</div>
+                            <div class="hour">5:00</div>
+                            <div class="hour">6:00</div>
+                            <div class="hour">7:00</div>
+                            <div class="hour">8:00</div>
+                            <div class="hour">9:00</div>
+                            <div class="hour">10:00</div>
+                            <div class="hour">11:00</div>
+                            <div class="hour">12:00</div>
+                        </div>
+                    </div>
+                </div>
+                <button>SUBMIT</button>
+                <script>
+                    var tmp=document.querySelectorAll('.hour');
+                    for(var i=0;i<tmp.length;i++){
+                        tmp[i].addEventListener('mousedown',function(){
+                            console.log(this.style.backgroundColor);
+                            if(this.style.backgroundColor==="cyan"){
+                                this.style.backgroundColor="violet";
+                            }else {
+                                this.style.backgroundColor="cyan";
+                            }
+                        })
+                    }
+                </script>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

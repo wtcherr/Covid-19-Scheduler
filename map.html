@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./app.js"></script>
+    <script src="./main.js"></script>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="side-nav">
+        <div class="nav-btn" onclick="openNav(document.querySelector('.side-nav'),closeBtn(this))">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="nav-links fade">
+            <div class="nav-search-bar">
+                <input type="text" placeholder="Search..">
+            </div>
+            <a href="index.html">Home</a>
+            <a href="map.html">Make Reservation</a>
+            <a href="regplace.html">Register Place</a>
+        </div>
+    </div>
+    <div class="main">
+        <div id="map"></div>
+        <div class="filter">
+            <div class="filter-form">
+                <h3>Filter</h3>
+                <form action="">
+                    <select name="place" id="place">
+                        <option value="">Select Place</option>
+                        <option value="gym">Gym</option>
+                        <option value="club">Club</option>
+                        <option value="cafe">Cafe</option>
+                    </select>
+                    <input type="date" id="regdate" name="regdate">
+                    <label for="strtime">Start Time</label>
+                    <input type="time" id="strtime" name="strtime">
+                    <select name="duration" id="duration">
+                        <option value="">Duration</option>
+                        <option value="1">1hr</option>
+                        <option value="2">2hrs</option>
+                        <option value="3">3hrs</option>
+                    </select>
+                    <div class="apply-btn" onclick="showResults()">APPLY</div>
+                </form>
+            </div>
+        </div>
+        <div class="search-results">
+            <h4>Results</h4>
+            <div class="result">
+                <div class="result-img"></div>
+                <div class="result-info">
+                    <h3>Spartak Gym</h3>
+                    <p>123, elmoez street, cairo</p>
+                </div>
+            </div>
+            <div class="result">
+                <div class="result-img"></div>
+                <div class="result-info">
+                    <h3>Cosmos Gym</h3>
+                    <p>23, El alfy street, giza</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            function showResults(){
+                var x=document.querySelector('.search-results');
+                x.style.display="block";
+            }
+            /*function showResults(){
+                var x=document.querySelectorAll('.result');
+                for(var i=0;i<x.length;i++){
+                    x[i].style.display="flex";
+                }
+            }*/
+        </script>
+    </div>
+</body>
+</html>

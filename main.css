@@ -1,0 +1,353 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+.main{
+    height: 100%;
+    margin-left:50px;
+    transition: all 0.5s ease;
+    position: relative;
+}
+:root{
+    --main-purple:rgb(134, 12, 106);
+    --dark-purple:rgb(56, 4, 44);
+}
+.side-nav{
+    width: 50px;
+    height: 100%;
+    background-color: var(--main-purple);
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease;
+}
+.nav-links{
+    transition: all 0.5s ease;
+    display: none;
+}
+.nav-search-bar{
+    width: 80%;
+    height: 50px;
+    margin: auto;
+}
+.nav-search-bar input{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+.nav-links a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 50px 0;
+    width: 100%;
+    text-align: center;
+    transition: all 0.9s ease;
+}
+.side-nav a:hover{
+    background-color: rgb(48, 47, 47);
+}
+.nav-btn{
+    width: 30px;
+    cursor: pointer;
+    margin: 20px 0 20px 5px;
+}
+.bar1 ,.bar2, .bar3{
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.5s ease;
+}
+.nav-btn-close .bar1{
+    transform: rotate(45deg) translate(5px,5px);
+    width: 22px;
+}
+.nav-btn-close .bar2{
+    opacity: 0;
+}
+.nav-btn-close .bar3{
+    transform: rotate(-45deg) translate(5px,-5px);
+    width: 22px;
+}
+.main-preview{
+    width: 100%;
+    height: 668px;
+}
+.view{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+}
+.img{
+    height: 668px;
+    width: 100%;
+    max-height: 668px;
+    background-position: center;
+    background-size: cover;  
+    background-attachment: fixed;
+    position: relative;
+}
+#img1{
+    background-image: url("./Imgs/gym.jpg");
+}
+#img2{
+    background-image: url("./Imgs/crowded\ place.jpg");
+}
+#img3{
+    background-image: url("./Imgs/social\ distanced\ gym.jpg");
+}
+.img-desc1{
+    width: 80%;
+    height: 50%;
+    background-color: rgba(204, 204, 204,0.7);
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    margin-left: -40%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+.img-desc1 .logo{
+    height: 200px;
+}
+.img-desc1 .logo img{
+    width: 150px;
+    height: 150px;
+}
+.img-desc2{
+    width: 50%;
+    height: 50%;
+    background-color: rgba(131, 5, 120, 0.7);
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    margin-left: -40%;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+.img-desc3{
+    width: 40%;
+    height: 50%;
+    background-color: rgba(94, 93, 94, 0.2);
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+.fade{
+    animation: fade 1.5s ease;
+}
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+/*map styling*/
+#map{
+    height: 100%;
+    transition: all 0.5s ease;
+}
+.filter{
+    width: 194px;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    margin: 100px 0 0 10px;
+    border-radius: 2px;
+}
+.filter h3{
+    text-align: center;
+    margin: 0;
+    color: black;
+    font-weight: 100;
+}
+.filter-form{
+    width: 90%;
+    margin: auto;
+    padding-top: 15px;
+}
+.filter-form label{
+    font-size: 0.9em;
+}
+.filter-form input[type="date"],input[type="time"],select{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin-bottom: 30px;
+    outline: none;
+}
+.filter-form .apply-btn{
+    width: 95%;
+    border: none;
+    background-color: var(--main-purple);
+    padding: 5px;
+    border-radius: 2px;
+    color: white;
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+.search-results{
+    width: 250px;
+    height: 280px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: white;
+    margin: 60px 10px 0 0;
+    border-radius: 2px;
+    display: none;
+}
+.search-results h4{
+    text-align: center;
+}
+.result{
+    width: 90%;
+    height: 60px;
+    margin: 10px auto;
+    background-color: var(--main-purple);
+    border-radius: 2px;
+    display: flex;
+}
+.result-img{
+    background-image: url(./Imgs/gym.jpg);
+    width: 30%;
+    height: 100%;
+    background-size: cover;
+}
+.result-info{
+    width: 70%;
+    background-color: white;
+    margin: 3px;
+    padding: 5px;
+    font-size: 0.8em;
+}
+.result-info h3,h4,h5,h6,p{
+    margin: 0;
+}
+/*register place form*/
+.regplace-form{
+    padding: 10px;
+    width: 50%;
+    background-color: var(--main-purple);
+    margin: 50px auto;
+}
+.regplace-form form{
+    min-height: 300px;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.regplace-form .field{
+    width: 100%;
+    height: 50px;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 5px;
+    padding: 5px;
+}
+.regplace-form .field label{
+    color: var(--main-purple);
+}
+.regplace-form .field input{
+    border: none;
+    height: 25px;
+    padding-left: 10px;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgb(197, 194, 194);
+}
+.regplace-form .tab-btns{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.regplace-form button{
+    width: 80%;
+    height: 25px;
+    margin: 10px auto;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(134, 12, 106);
+    border: none;
+}
+/*infowindow*/
+.marker-infowindow{
+    text-align: center;
+    width: 150px;
+    height: 200px;
+}
+.marker-img{
+    background-size: cover;
+    background-position: center;
+    background-image: url(./Imgs/empty\ gym.jpg);
+    height: 100px;
+    width: 100%;
+}
+.marker-infowindow .checked{
+    color: orange;
+}
+.marker-infowindow h3{
+    margin: 0;
+}
+.marker-infowindow button{
+    width: 45%;
+    font-size: small;
+    border: none;
+    background-color: var(--main-purple);
+    border-radius: 2px;
+    color: white;
+    height: 20px;
+    transition: all 0.5s ease;
+    outline: none;
+}
+.infowindow-btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 20px;
+}
+.marker-infowindow button:hover{
+    background-color: rgb(247, 131, 220);
+    color: black;
+}
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 15px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--main-purple);
+    border-radius: 10px;
+}
