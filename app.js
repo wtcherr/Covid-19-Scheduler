@@ -1,6 +1,5 @@
 var script = document.createElement('script');
-//script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB1k4XGYGcmkt_4SLe7yFkES8UTcJxnWIw&callback=initMap';
-script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCEZFeVAQ6U1nUP7F3F4ap9qTE_AXiupHA&callback=initMap';
+script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB1k4XGYGcmkt_4SLe7yFkES8UTcJxnWIw&callback=initMap';
 script.defer = true;
 script.async = true;
 
